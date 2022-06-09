@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#define BIN_LEN 50  //binary array length
+#define BIN_LEN 50  //binary array length - can store numbers as high as 2.251.799.813.685.246 (sum 2^n)
 int l=0; //final length of binary array
 
 /** Convert decimal base number to binary base
