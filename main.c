@@ -24,7 +24,7 @@ int main(){
 
     //get exponent number
     int e=0;
-    printf("Enter exponent: ");
+    printf("Enter its exponent: ");
     scanf("%d",&e);
 
     //get modulus number
