@@ -33,14 +33,14 @@ int main(){
     scanf("%d",&m);
 
     //communicate choices to user
-    printf("\n%d ^ %d mod %d\n",n,e,m);
+    //printf("\n%d ^ %d mod %d\n",n,e,m);
 
 
     //Step 1: find the binary representation of e
     int *p=dec_to_bin(e);
     int e_bin=arr_to_int(p);
 
-    printf("\n%d(10) is %d(2)\nBin Len = %d\n\n",e,e_bin,l);
+    //printf("\n%d(10) is %d(2)\nBin Len = %d\n\n",e,e_bin,l);
 
     //Step 2: find the way to calculate 2nd number of e_bin
     //if 0 then square 'x'
@@ -62,10 +62,9 @@ int main(){
             k=x*n;
             x=k%m;
         }
-        printf("x:%d\n",x);
     }
 
-    printf("%d ^ %d mod %d = %d\n",n,e,m,x);
+    printf("\n%d ^ %d mod %d = %d\n",n,e,m,x);
 
     return 0;
 }
