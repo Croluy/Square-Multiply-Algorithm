@@ -40,7 +40,9 @@ int main(){
     int *p=dec_to_bin(e);
     int e_bin=arr_to_int(p);
 
-    //printf("\n%d(10) is %d(2)\nBin Len = %d\n\n",e,e_bin,l);
+    printf("\n%d(10) is %d(2)\nBinary Number's Length = %d\n",e,e_bin,l);
+
+    printf("So we'll need to do %d steps.\n",l-1);
 
     //Step 2: find the way to calculate 2nd number of e_bin
     //if 0 then square 'x'
@@ -51,20 +53,30 @@ int main(){
 
     for(current_bin=1; current_bin<l; current_bin++){
         //If the current check number is 0, then SQUARE
+        printf("\nStep %d:",current_bin);
+        printf("\t%d\n",*(p+current_bin));
         if(*(p+current_bin)==0){
+            printf("So we need to do a SQUARE operation on %d.\n",x);
             k=x*x;
+            printf("SQUARE:    %d * %d = %d\n",x,x,k);
             x=k%m;
+            printf("Now we calculate: %d mod %d = %d\n",k,m,x);
         }
         if(*(p+current_bin)==1){
+            printf("So we need to do a SQUARE and MULTIPLY operation on %d.\n",x);
             k=x*x;
+            printf("SQUARE:    %d * %d = %d\n",x,x,k);
             x=k%m;
+            printf("Now we calculate: %d mod %d = %d\n",k,m,x);
 
             k=x*n;
+            printf("MULTIPLY:    %d * %d = %d\n",x,n,k);
             x=k%m;
+            printf("Now we calculate: %d mod %d = %d\n",k,m,x);
         }
     }
 
-    printf("\n%d ^ %d mod %d = %d\n",n,e,m,x);
+    printf("\n\nFINAL RESULT:\t%d ^ %d mod %d = %d\n",n,e,m,x);
 
     return 0;
 }
